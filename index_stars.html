@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NØISE | DROP 01</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      overflow: hidden;
+      background: #000;
+      font-family: Arial, sans-serif;
+      color: #fff;
+      text-align: center;
+    }
+
+    .stars, .stars2, .stars3 {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-repeat: repeat;
+      background-size: contain;
+      animation: moveStars 100s linear infinite;
+    }
+
+    .stars {
+      background-image: radial-gradient(white 1px, transparent 1px);
+      background-size: 2px 2px;
+      opacity: 0.5;
+    }
+
+    .stars2 {
+      background-image: radial-gradient(white 1.5px, transparent 1.5px);
+      background-size: 3px 3px;
+      opacity: 0.3;
+      animation-duration: 200s;
+    }
+
+    .stars3 {
+      background-image: radial-gradient(white 2px, transparent 2px);
+      background-size: 4px 4px;
+      opacity: 0.2;
+      animation-duration: 300s;
+    }
+
+    @keyframes moveStars {
+      from { transform: translateY(0); }
+      to { transform: translateY(1000px); }
+    }
+
+    .content {
+      position: relative;
+      z-index: 10;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .logo {
+      font-size: 2rem;
+      margin-bottom: 40px;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: 3rem;
+      letter-spacing: 4px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin: 20px 0;
+    }
+
+    input[type="email"] {
+      padding: 12px;
+      font-size: 1rem;
+      border: none;
+      outline: none;
+      width: 280px;
+      margin-top: 10px;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 12px 24px;
+      font-size: 1rem;
+      background-color: #fff;
+      color: #000;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="stars"></div>
+  <div class="stars2"></div>
+  <div class="stars3"></div>
+
+  <div class="content">
+    <div class="logo">NØISE.</div>
+    <h1>DROP 01 — 02.07.2025</h1>
+    <p>Be first. Join the wave before it hits.</p>
+    <form>
+      <input type="email" placeholder="Enter your email" required />
+      <br />
+      <button type="submit">Notify Me</button>
+    </form>
+  </div>
+</body>
+</html>
